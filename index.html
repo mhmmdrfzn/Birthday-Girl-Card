@@ -1,45 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Card</title>
-
-    <script>
-      var code = prompt("Haaa masukkan code dulu sebelum nak tengok hehe 🤭");
-      if (code == "23012025"){
-          txt = "Hiii Farisya Nur Aina ! 🤍✨";
-      } else {
-          txt = "Teeeettttt, wrong code !";
-          location.reload();
-      }
-      alert(txt);
-  </script>
-    <!-- Google Font-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="card.css" />
-  </head>
-  <body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background-color: #ffeb3b;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 350px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card h1 {
+            color: #e91e63;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .card p {
+            color: #333;
+            font-size: 18px;
+        }
+        .card .message {
+            font-size: 20px;
+            color: #4caf50;
+            font-weight: bold;
+        }
+        .card .footer {
+            margin-top: 30px;
+            font-size: 16px;
+            color: #9e9e9e;
+        }
+        /* Mobile View */
+        @media (max-width: 600px) {
+            .card h1 {
+                font-size: 28px;
+            }
+            .card p {
+                font-size: 16px;
+            }
+            .card .message {
+                font-size: 18px;
+            }
+            .card .footer {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
     <div class="card">
-      <div class="outside">
-        <div class="front">
-          <p>Happy Birthday</p>
-          <div class="cake">
-            <div class="top-layer"></div>
-            <div class="middle-layer"></div>
-            <div class="bottom-layer"></div>
-            <div class="candle"></div>
-          </div>
-        </div>
-        <div class="back"></div>
-      </div>
-      <div class="inside">
-        <p>Wishing you a very happy birthday filled with love and laughter</p>
-        <h1>&#127873;</h1>
-      </div>
+        <h1>Happy Birthday!</h1>
+        <p class="message">Wishing you a day filled with love, joy, and laughter.</p>
+        <p>Enjoy your special day!</p>
+        <div class="footer">From: [Your Name]</div>
     </div>
-  </body>
+</body>
 </html>
