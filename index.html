@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Card</title>
+    <audio autoplay>
+        <source src="happy birthday.mp3">
+    </audio>
+    <img src="birthday1.gif" class="bottom">
     <style>
         body {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -19,22 +23,24 @@
         .card {
             background-color: #f1f3f3;
             border-radius: 15px;
-            width: 90%;
-            height: 90%;
+            width: 70%;
+            height: 80%;
             max-width: 350px;
-            max-height: 700px;
+            max-height: 600px;
             padding: 20px;
             text-align: center;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            left: 50%;  /* Centers it horizontally */
+            transform: translateX(-50%);  /* Ensures it’s perfectly centered */
         }
         .card h1 {
             color: #000000;
             font-size: 30px;
             margin-bottom: 20px;
-        }
-        .card p {
-            color: #333;
-            font-size: 12px;
         }
         .card .message {
             font-size: 15px;
@@ -46,10 +52,41 @@
             font-size: 16px;
             color: #9e9e9e;
         }
+        button{
+            width: 200px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #000000;
+            background: transparent;
+            color: #0609a0;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            }
+            span{
+                background: #000000;
+                height: 100%;
+                width: 0;
+                border-radius: 25px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                transition: 0.5s;
+            }
+            button:hover span{
+                width: 100%;
+            }
+            button:hover{
+                border: none;
+            }
         /* Mobile View */
         @media (max-width: 600px) {
             .card h1 {
-                font-size: 30px;
+                font-size: 25px;
             }
             .card .message {
                 font-size: 15px;
@@ -57,13 +94,41 @@
             .card .footer {
                 font-size: 14px;
             }
+            button{
+            width: 70px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #000000;
+            background: transparent;
+            color: #0609a0;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            }
+            span{
+                background: #000000;
+                height: 100%;
+                width: 0;
+                border-radius: 25px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                transition: 0.5s;
+            }
+            button:hover span{
+                width: 100%;
+            }
+            button:hover{
+                border: none;
+            }
         }
     </style>
 </head>
 <body>
-    <audio autoplay>
-        <source src="happy birthday.mp3">
-    </audio>
     <div class="card">
         <h1>Happy Birthday Farisya 🤍!</h1>
         <p class="message">Happy Birthday Si Cantik yang bernama Farisya Nur Aina 🤍🫶🏼✨! Hehehe dah
@@ -75,8 +140,13 @@
                            keluarga awak okay ! Jangan risau, saya sentiasa support awak dari jauh hehehe.
                            Pastuu, jangan degil-degil okay budak kecik HAHAHAHAHA. Tak lama lagi ada exam kan ?
                            Hahh study betul-betul nanti okayy and goodluck untuk exam semester ni 🫶🏼✨! Buat
-                           yang terbaik tauu ! hehehe  </p>
-        <div class="footer">From: [Your Name]</div>
+                           yang terbaik tauu ! hehehe stay cute and stay pretty yaa awaknyaa 🤍! Sorry kalau wish
+                           ni tak panjang huhu ☹️. So, enjoy your day okayy and jangan stress stress tauu ! hehehe
+                           By the way ada video saya kat situ, kalau nak tengok nanti tekan la bawah tu HAHAHAHAHA
+                           tapi buruk video tu hmm HAHAHAHA So again, Happy Birthday Farisya Nur Aina !!! 🎉🎊🤍✨</p>
+        <div>
+            <button onclick="location.href='semester1.html'" type="button"><span></span>Ni Video HAHAHA</button>
+        </div>
     </div>
 </body>
 </html>
